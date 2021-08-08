@@ -1,0 +1,35 @@
+<body>
+ <script type="text/javascript">
+  var path = location.href;
+  var len = path.length
+  var result = '';
+  var i = 0;
+
+  while(1){
+   if(path[i - 1] == '?') {
+      for (var j = 0; j < len - i; j++) {
+       // document.writeln(j+':');
+       // document.writeln(path[i + j]);
+        result=result+path[i+j];
+      }
+      break;
+    }
+    i++;
+  }
+  result = window.btoa(result);
+
+  document.writeln(result);
+  // for(var i = 0; i < len; i++){
+  //   if(path[i - 1] == '?'){
+  //    // document.write(path[i - 1]);
+  //    document.writeln(i+":");
+  //    document.write(path[i]);
+  //     result.concat(result, path[i]);
+  //   }
+  // }
+  // document.write(result);
+  // var a;
+  // var b = window.btoa(a);
+  //windows.alert(b);
+ </script>
+</body>
